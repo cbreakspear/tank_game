@@ -9,11 +9,11 @@ display_height = 600
 
 gameDisplay = pygame.display.set_mode((display_width, display_height))
 
-#fire_sound = pygame.mixer.Sound("1.mp3")
-#explosion_sound = pygame.mixer.Sound("1.mp3")
+fire_sound = pygame.mixer.Sound("1.mp3")
+explosion_sound = pygame.mixer.Sound("2.mp3")
 
-#pygame.mixer.music.load("1.mp3")
-#pygame.mixer.music.play(-1)
+pygame.mixer.music.load("3.mp3")
+pygame.mixer.music.play(-1)
 
 
 pygame.display.set_caption('Tanks - Spearware Product with the help of code-projects.org')
@@ -231,7 +231,7 @@ def barrier(xlocation, randomHeight, barrier_width):
 
 #---------------------------function for explosion for both tanks---------------------------------------
 def explosion(x, y, size=50):
-    #pygame.mixer.Sound.play(explosion_sound)
+    pygame.mixer.Sound.play(explosion_sound)
     explode = True
 
     while explode:
@@ -261,7 +261,7 @@ def explosion(x, y, size=50):
 
 #--------------------------------firing function for players tank-------------------------------------------
 def fireShell(xy, tankx, tanky, turPos, gun_power, xlocation, barrier_width, randomHeight, enemyTankX, enemyTankY):
-    #pygame.mixer.Sound.play(fire_sound)
+    pygame.mixer.Sound.play(fire_sound)
     fire = True
     damage = 0
 
@@ -326,7 +326,7 @@ def fireShell(xy, tankx, tanky, turPos, gun_power, xlocation, barrier_width, ran
 
 #--------------------------------firing function for computer's tank-------------------------------------------
 def e_fireShell(xy, tankx, tanky, turPos, gun_power, xlocation, barrier_width, randomHeight, ptankx, ptanky):
-    #pygame.mixer.Sound.play(fire_sound)
+    pygame.mixer.Sound.play(fire_sound)
     #Brought To You By code-projects.org
     damage = 0
     currentPower = 1
